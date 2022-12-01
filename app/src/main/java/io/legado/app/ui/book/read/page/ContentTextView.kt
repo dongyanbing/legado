@@ -174,6 +174,7 @@ class ContentTextView(context: Context, attrs: AttributeSet?) : View(context, at
                         textPaint.color = context.accentColor
                     }
                     canvas.drawText(it.charData, it.start, lineBase, textPaint)
+                    //如果是选中，绘制背景色
                     if (it.selected) {
                         canvas.drawRect(it.start, lineTop, it.end, lineBottom, selectedPaint)
                     }
